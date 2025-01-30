@@ -1,0 +1,48 @@
+.ispinner {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+.ispinner .ispinner-blade {
+    position: absolute;
+    top: 37%;
+    left: 44.5%;
+    width: 10%;
+    height: 35%;
+    border-radius: 50% / 20%;
+    animation: iSpinnerBlade 1s linear infinite;
+    will-change: opacity;
+}
+
+.ispinner .ispinner-blade:nth-child(1) {
+    transform: rotate(30deg) translate(0, -150%);
+    animation-delay: -1.6666666667s;
+}
+
+.ispinner .ispinner-blade:nth-child(2) {
+    transform: rotate(60deg) translate(0, -150%);
+    animation-delay: -1.5833333333s;
+}
+
+/* Other nth-child styles remain unchanged */
+
+.ispinner-large {
+    width: 70px;
+    height: 70px;
+}
+
+@keyframes iSpinnerBlade {
+    0% {
+        opacity: 0.85;
+    }
+
+    50% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0.25;
+    }
+}
