@@ -34,9 +34,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${roboto.variable}`}
+        className={`${geistSans.variable} ${geistMono.variable} ${roboto.variable} antialiased`}
+        suppressHydrationWarning
       >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeProvider theme={theme} >{children}</ThemeProvider>
